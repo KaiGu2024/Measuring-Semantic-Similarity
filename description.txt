@@ -1,0 +1,24 @@
+The code is divided to 2 parts: 
+1. test bleu similarity in train and dev
+2. predict test from train and dev
+
+# Data Cleaning
+1. text to str.lower
+2. standardize signs like """ to ''', Who s to who is
+3. remove greetings
+4. change words like AI NLP to full name
+In fact, I tried skills like lemma and stopword, but it just doesn't work well.
+
+# Track 1
+1. Representation: combination different kinds of TF-IDF
+2. Similarity: Cosine Similarity of the above representations. 
+Choose the highest one.
+
+# Track 2
+1. Representation: combination of doc2vec and fasttext
+2. similarity: Cosine Similarity like Track 1.
+
+# Track 3
+1. model = SentenceTransformer("BAAI/bge-large-en")
+2. faiss similarity  
+
